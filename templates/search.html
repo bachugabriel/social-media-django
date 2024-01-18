@@ -5,7 +5,7 @@
 <link rel="stylesheet" href="{% static 'css/index.css' %}">
 
 <body>
-    <div class="container p-1"><h4>Results For <span>""</span></h4></div>
+    <div class="container p-1"><h4>Results For <span>"{{username}}"</span></h4></div>
     {% for users in username_profile_list %}
         <div class="container">
           <div class="row d-flex justify-content-center p-1">
