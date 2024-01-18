@@ -1,0 +1,86 @@
+@media screen and (min-width:992px){
+    .nav-item {
+        height: 70px;
+    line-height:70px;
+    }
+  }
+
+
+
+
+  #headerNav {
+    background-color: #fff;
+}
+
+.nav-link{
+    color: #ce8460;
+}
+
+body{
+    background-color: #f8f9fa;
+}
+
+h6{
+    color: #ce8460;
+    font-weight: bold;
+    font-size: 18px;
+    font-family: serif;
+}
+
+h4{
+    font-weight: bold;
+    font-size: 18px;
+    font-family: serif;
+}
+
+h5{
+    font-weight: bold;
+    font-size: 18px;
+    font-family: serif;
+}
+
+span {
+    color: #dda4a4;
+}
+
+p {
+    color: #575769;
+}
+
+.img-fluid-customer{
+    height: 100px;
+    width: 100px;
+}
+  
+.comment-customer{
+    display: flex;
+    align-items: flex-start;
+}
+
+
+
+.btn-light {
+    color: #212529;
+    background-color: white;
+    border-color: #ce8460;
+}
+
+.btn-light:hover {
+    color: white;
+    background-color: #ce8460;
+    border-color: #ce8460
+}
+
+.nav-link:hover {
+    color: white;
+    background-color: #ce8460;
+    border-color: #ce8460
+}
+
+.small{
+    color: #dda4a4;
+}
+
+a{
+    color: #ce8460;
+}

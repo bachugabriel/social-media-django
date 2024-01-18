@@ -1,0 +1,33 @@
+{% extends 'navbar.html' %}
+{% load static %}
+{% block content %}
+
+<link rel="stylesheet" href="{% static 'css/index.css' %}">
+
+<body>
+    <div class="container p-1"><h4>Results For <span>""</span></h4></div>
+    {% for users in username_profile_list %}
+        <div class="container">
+          <div class="row d-flex justify-content-center p-1">
+            <div class="col col-md-9 col-lg-7 col-xl-8">
+              <div class="card" style="border-radius: 15px;">
+                <div class="card-body p-4">
+                  <div class="d-flex text-black">
+                    <div class="flex-shrink-0">
+                      <img src="{{users.profileimg.url}}"
+                        alt="Generic placeholder image" class="img-fluid"
+                        style="width: 100px; border-radius: 10px;">
+                    </div>
+                    <div class="flex-grow-1 ms-3">
+                      <h5 class="mb-1"><a href="/profile/{{users.user}}">@{{users.user}}</a></h5>
+                      <p class="mb-2 pb-1" style="color: #2b2a2a;">{{users.location}}</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+    </body>
+    {% endblock content %}

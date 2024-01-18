@@ -1,0 +1,256 @@
+{% extends 'navbar.html' %}
+{% load static %}
+{% block content %}
+
+<link rel="stylesheet" href="{% static 'css/index.css' %}">
+
+<body>
+
+
+    <div class="container col-10 p-3">
+        <div class="card social-timeline-card">
+            <form action="upload" method="POST" enctype="multipart/form-data" >
+                {% csrf_token %}
+      <div class="card-header">
+        <div class="row">
+        <div class="col-8 d-flex justify-content-start">Share your insights<input type="file" class="form-control" name="image_upload" id="customFile" />
+      </div>
+       
+    </div>
+</div>
+      <div class="card-body">
+        <div class="tab-content" id="myTabContent">
+            <div class="tab-pane fade active show" id="posts" role="tabpanel" aria-labelledby="posts-tab">
+                <div class="form-group">
+                    <label class="sr-only" for="message"></label>
+                    <textarea class="form-control" name="caption" id="message" rows="3" placeholder="What are you thinking?" required></textarea>
+                </div>
+            </div>
+            
+        </div>
+        <div class="btn-toolbar justify-content-between my-2">
+            <div class="btn-group">
+                <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" class="bi bi-cloud-upload" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M4.406 1.342A5.53 5.53 0 0 1 8 0c2.69 0 4.923 2 5.166 4.579C14.758 4.804 16 6.137 16 7.773 16 9.569 14.502 11 12.687 11H10a.5.5 0 0 1 0-1h2.688C13.979 10 15 8.988 15 7.773c0-1.216-1.02-2.228-2.313-2.228h-.5v-.5C12.188 2.825 10.328 1 8 1a4.53 4.53 0 0 0-2.941 1.1c-.757.652-1.153 1.438-1.153 2.055v.448l-.445.049C2.064 4.805 1 5.952 1 7.318 1 8.785 2.23 10 3.781 10H6a.5.5 0 0 1 0 1H3.781C1.708 11 0 9.366 0 7.318c0-1.763 1.266-3.223 2.942-3.593.143-.863.698-1.723 1.464-2.383"/>
+                    <path fill-rule="evenodd" d="M7.646 4.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 5.707V14.5a.5.5 0 0 1-1 0V5.707L5.354 7.854a.5.5 0 1 1-.708-.708z"/>
+                  </svg>
+                <button type="submit" class="btn btn-light mx-2">share</button>
+            </div>
+        </form>
+            </div>
+            </div>
+            </div>
+            </div>
+    
+<div class="container mt-3">
+<div class="profile-page tx-13">
+  
+    <div class="row profile-body">
+        <!-- left wrapper start -->
+        <div class="d-none d-md-block col-md-4 col-xl-3 left-wrapper">
+            <div class="card rounded">
+                <div class="card-body">
+                    <div class="d-flex align-items-center justify-content-between mb-2">
+                        <h6 class="card-title mb-0">About</h6>
+                        <div class="dropdown">
+                            <button class="btn p-0" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-more-horizontal icon-lg text-muted pb-3px">
+                                    <circle cx="12" cy="12" r="1"></circle>
+                                    <circle cx="19" cy="12" r="1"></circle>
+                                    <circle cx="5" cy="12" r="1"></circle>
+                                </svg>
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                <a class="dropdown-item d-flex align-items-center" href="#">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-edit-2 icon-sm mr-2">
+                                        <path d="M17 3a2.828 2.828 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5L17 3z"></path>
+                                    </svg> <span class="">Edit</span></a>
+                                <a class="dropdown-item d-flex align-items-center" href="#">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-git-branch icon-sm mr-2">
+                                        <line x1="6" y1="3" x2="6" y2="15"></line>
+                                        <circle cx="18" cy="6" r="3"></circle>
+                                        <circle cx="6" cy="18" r="3"></circle>
+                                        <path d="M18 9a9 9 0 0 1-9 9"></path>
+                                    </svg> <span class="">Update</span></a>
+                                <a class="dropdown-item d-flex align-items-center" href="#">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-eye icon-sm mr-2">
+                                        <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                                        <circle cx="12" cy="12" r="3"></circle>
+                                    </svg> <span class="">View all</span></a>
+                            </div>
+                        </div>
+                    </div>
+                    <p>Hi! I'm Bac, Python Django Developer. I hope you enjoy the design and quality of Social.</p>
+                    <div class="mt-3">
+                        <label class="tx-11 font-weight-bold mb-0 text-uppercase">Joined:</label>
+                        <p class="text-muted">January 15, 2024</p>
+                    </div>
+                    <div class="mt-3">
+                        <label class="tx-11 font-weight-bold mb-0 text-uppercase">Lives:</label>
+                        <p class="text-muted">New York, USA</p>
+                    </div>
+                    <div class="mt-3">
+                        <label class="tx-11 font-weight-bold mb-0 text-uppercase">Email:</label>
+                        <p class="text-muted">me@zero.com</p>
+                    </div>
+                    <div class="mt-3">
+                        <label class="tx-11 font-weight-bold mb-0 text-uppercase">Website:</label>
+                        <p class="text-muted">www.zero.com</p>
+                    </div>
+                    <div class="mt-3 d-flex social-links">
+                        <a href="javascript:;" class="btn d-flex align-items-center justify-content-center border mr-2 btn-icon github">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-github" data-toggle="tooltip" title="" data-original-title="github.com/nobleui">
+                                <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                            </svg>
+                        </a>
+                        <a href="javascript:;" class="btn d-flex align-items-center justify-content-center border mr-2 btn-icon twitter">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-twitter" data-toggle="tooltip" title="" data-original-title="twitter.com/nobleui">
+                                <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path>
+                            </svg>
+                        </a>
+                        <a href="javascript:;" class="btn d-flex align-items-center justify-content-center border mr-2 btn-icon instagram">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-instagram" data-toggle="tooltip" title="" data-original-title="instagram.com/nobleui">
+                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- left wrapper end -->
+        <!-- middle wrapper start -->
+        
+        <div class="col-md-8 col-xl-6 middle-wrapper">
+            <div class="row">
+                {% for post in page_obj reversed%}
+                <div class="col-md-12 grid-margin">
+                    <div class="card rounded">
+                        <div class="card-header">
+                            <div class="d-flex align-items-center justify-content-between">
+                                <div class="d-flex align-items-center">
+                                  <!--  <img class="img-xs rounded-circle" src="" alt="">-->
+                                    <div class="ml-2">
+                                        <span class="block font-semibold "><a href="/profile/{{post.user}}"><h4>@{{post.user|lower}}</h4></a></span>
+                                        <p class="tx-11 text-muted">{{post.created_at}}</p>
+                                    </div>
+                                </div>
+                             
+                            </div>
+                        </div>
+                        
+                        <div class="card-body">
+                            <p class="mb-3 tx-14">{{post.caption}}</p>
+                            {% if post.image %}
+                            <div class="d-flex justify-content-center">
+                            <img class="img-fluid" src="{{post.image.url}}" width="400" alt="">
+                        </div>
+                            {% else %}
+                                
+                        {% endif %}
+                        </div>
+                        <div class="card-footer">
+                            <div class="d-flex post-actions">
+                                <a href="/like-post?post_id={{post.id}}" class="d-flex align-items-center text-muted mr-4">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-heart icon-md">
+                                        <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                                    </svg>
+                                    <p class="d-none d-md-block ml-2 mx-2">Like</p>
+                                </a>
+                                {% if post.no_of_likes == 0 %}
+                                            <p>No likes</p>
+                                            {% elif post.no_of_likes == 1 %}
+                                            <p>Liked by {{post.no_of_likes}} person</p>
+                                            {% else %}
+                                            <p>Liked by {{post.no_of_likes}} people</p>
+                                            {% endif %}
+                            
+                                <svg class="bi" width="32" height="32" fill="currentColor">
+                                    <use xlink:href="bootstrap-icons.svg#heart-fill"/>
+                                  </svg>
+                                  {% if post.image %}
+                               
+                                <a href="{{post.image.url}}" class="d-flex justify-content-end" download>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" class="bi bi-cloud-download" viewBox="0 0 16 16">
+                                    <path d="M4.406 1.342A5.53 5.53 0 0 1 8 0c2.69 0 4.923 2 5.166 4.579C14.758 4.804 16 6.137 16 7.773 16 9.569 14.502 11 12.687 11H10a.5.5 0 0 1 0-1h2.688C13.979 10 15 8.988 15 7.773c0-1.216-1.02-2.228-2.313-2.228h-.5v-.5C12.188 2.825 10.328 1 8 1a4.53 4.53 0 0 0-2.941 1.1c-.757.652-1.153 1.438-1.153 2.055v.448l-.445.049C2.064 4.805 1 5.952 1 7.318 1 8.785 2.23 10 3.781 10H6a.5.5 0 0 1 0 1H3.781C1.708 11 0 9.366 0 7.318c0-1.763 1.266-3.223 2.942-3.593.143-.863.698-1.723 1.464-2.383"/>
+                                    <path d="M7.646 15.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 14.293V5.5a.5.5 0 0 0-1 0v8.793l-2.146-2.147a.5.5 0 0 0-.708.708z"/>
+                                  </svg>
+                                </a>
+                                {% else %}
+                                
+                                {% endif %}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                {% endfor %}
+            </div>
+        </div>
+        <!-- middle wrapper end -->
+        <!-- right wrapper start -->
+        <div class="d-none d-xl-block col-xl-3 right-wrapper">
+            <div class="row">
+              
+                <div class="col-md-12 grid-margin">
+                    <div class="card rounded">
+                        <div class="card-body">
+                            <h6 class="card-title mb-4">suggestions for you</h6>
+                            {% for suggestion in suggestions_username_profile_list %}
+                            <div class="d-flex justify-content-between mb-2 pb-2 border-bottom">
+                                <div class="d-flex align-items-center hover-pointer">
+                                    <a href="/profile/{{suggestion.user}}">
+                                    <img class="img-xs rounded-circle" src="{{suggestion.profileimg.url}}" alt="">
+                                    </a>
+                                    <div class="ml-2 mx-3">
+                                        <h6>{{suggestion.user}}</h6>
+                                        <p class="tx-11 text-muted">{{suggestion.location}}</p>
+                                    </div>
+                                </div>
+                                <a href="/profile/{{suggestion.user}}">
+                                <button class="btn btn-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-user-plus" data-toggle="tooltip" title="" data-original-title="Connect">
+                                        <path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                                        <circle cx="8.5" cy="7" r="4"></circle>
+                                        <line x1="20" y1="8" x2="20" y2="14"></line>
+                                        <line x1="23" y1="11" x2="17" y2="11"></line>
+                                    </svg>
+                                </button>
+                            </a>
+                            </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+
+                
+            </div>
+        </div>
+        <!-- right wrapper end -->
+
+        <!-- pagination start -->
+
+        <div class="pagination justify-content-center p-5">
+            <span class="step-links">
+                {% if page_obj.has_previous %}
+                    <a href="?page=1" class="mx-1">&laquo; first</a>
+                    <a href="?page={{ page_obj.previous_page_number }}" class="mx-1">previous</a>
+                {% endif %}
+        
+                <span class="current mx-3">
+                    Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}
+                </span>
+        
+                {% if page_obj.has_next %}
+                    <a href="?page={{ page_obj.next_page_number }}" class="mx-1">next</a>
+                    <a href="?page={{ page_obj.paginator.num_pages }}" class="mx-1">last &raquo;</a>
+                {% endif %}
+            </span>
+        </div>
+        <!-- pagination end -->
+    </div>
+</div>
+</div>
+
+{% endblock content %}
